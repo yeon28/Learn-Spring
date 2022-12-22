@@ -1,0 +1,17 @@
+package p304.di.collection.properties;
+
+import java.util.Map;
+import java.util.Properties;
+
+public class CollectionBean {
+	private Properties addrList;
+
+	public Map<String, String> getAddrList() {
+		return addrList;
+	}
+
+	public void setAddrList(Map<String, String> addrList) {
+		this.addrList = addrList;
+	}
+	
+}

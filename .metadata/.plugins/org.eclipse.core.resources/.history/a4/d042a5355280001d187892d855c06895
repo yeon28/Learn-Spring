@@ -1,0 +1,27 @@
+package p304.di.collection.properties;
+
+import java.util.Iterator;
+import java.util.Properties;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class CollectionBeanClient {
+	public static void main(String[] args) {
+
+		AbstractApplicationContext factory 
+				= new GenericXmlApplicationContext("applicationContext304.xml");
+		
+		CollectionBean bean = (CollectionBean) factory.getBean("collectionBean");
+		Properties addrList = bean.getAddrList();
+		
+		Iterator<String> keys = addrList.keySet().iterator();
+		
+		while (keys.hasNext()) {
+			String key = keys.next();
+			System.out.println("key : " + key + "\t| value : " + addrList.get(key));
+		}
+		
+		factory.close();
+	}
+}

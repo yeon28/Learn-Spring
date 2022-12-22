@@ -1,0 +1,34 @@
+package p401.di.annotation;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+/*
+ * Spring에서는 @Component annotation은 거의 사용하지 않고 @Component의 자식 annotation을 사용함
+ * 		-> @Service @Repository @Controller
+ *  @Service 	: Service
+ *  @Repository : DAO
+ *  @Controller	: Servlet
+ */
+//@Component // id를 부여하지 않으면 spring이 class이름으로 자동 id명 생성함.
+@Component("apple")
+public class AppleSpeaker implements Speaker {
+	
+	public AppleSpeaker() {
+		System.out.println("--> AppleSpeaker 객체 생성");
+	}
+	
+	@Override
+	public void volUp() {
+		System.out.println("AppleSpeaker --> 볼륨을 올린다.");
+	}
+	
+	@Override
+	public void volDown() {
+		System.out.println("AppleSpeaker --> 볼륨을 내린다.");
+	}
+	
+}

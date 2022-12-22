@@ -1,0 +1,53 @@
+package p110.di.contructor3;
+
+public class SamsungTV implements TV {
+
+	private Speaker Speaker;
+	private int price;
+	
+	public SamsungTV() {
+		System.out.println("1. SamsungTV 객체 생성");
+	}
+	
+	public SamsungTV(SonySpeaker speaker) {
+		System.out.println("1. SamsungTV 객체 생성");
+		this.Speaker = speaker;
+	}
+	
+	public SamsungTV(SonySpeaker speaker, int price) {
+		System.out.println("1. SamsungTV 객체 생성");
+		this.Speaker = speaker;
+		this.price =  price;
+	}
+	
+	@Override
+	public void powerOn() {
+		System.out.println("samsungTV--> 전원을 켠다");
+		System.out.println("price : " + this.price);
+
+	}
+
+	@Override
+	public void powerOff() {
+		System.out.println("samsungTV--> 전원을 끈다");
+
+	}
+
+	@Override
+	public void volUp() {
+		this.Speaker.volUp();
+		System.out.println("samsungTV--> 소리를 높임");
+	}
+
+	@Override
+	public void volDown() {
+		this.Speaker.volDown();
+		System.out.println("samsungTV--> 소리를 줄임");
+	}
+	
+	
+	
+	
+
+	
+}

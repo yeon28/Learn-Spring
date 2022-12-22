@@ -1,0 +1,5 @@
+package p011.coupling.polymorphism;
+
+public interface TV {
+
+}

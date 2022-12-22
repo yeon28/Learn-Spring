@@ -1,0 +1,28 @@
+package p021.bean.basic;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+/* 
+ * */	
+public class TVUser {
+	
+	public static void main(String[] args) {
+//		System.out.println(args[0]);
+
+		AbstractApplicationContext factory 
+						//applicationContext.xml 읽어옮.
+					= new GenericXmlApplicationContext("applicationContext.xml");
+		
+		// applicationContext.xml에 있는 id가  tv인 <bean>을 찾아서 new로 인스턴스 생성함.
+		TV tv = (TV) factory.getBean("tv");
+		
+		tv.powerOn();
+		tv.volUp();
+		tv.volDown();
+		tv.powerOff();
+		
+		
+		
+	}
+}

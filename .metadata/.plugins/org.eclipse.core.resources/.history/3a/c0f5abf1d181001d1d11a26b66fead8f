@@ -1,0 +1,7 @@
+package com.spring.biz.board.impl;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class d implements RowMapper<T> {
+
+}

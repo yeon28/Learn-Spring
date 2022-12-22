@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="S401_SpringMVC_Simulation"/>
+<aop-project name="S01_Basic"/>
+<aop-project name="S032_AOP_Anno"/>
+<aop-project name="S02_BIz1_BoardService"/>
+<aop-project name="S031_AOP"/>
+<aop-project name="S034_Transection"/>
+<aop-project name="S033_Spring_JDBC"/>
+</aop-reference-model>

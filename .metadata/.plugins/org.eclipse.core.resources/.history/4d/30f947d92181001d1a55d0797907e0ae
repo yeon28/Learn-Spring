@@ -1,0 +1,8 @@
+package com.spring.biz.common;
+
+public class AfterThrowingAdvice {
+
+	private void exeptionLog() {
+		System.out.println("[예외 처리] 비지니스 로직 수행 중 예외 발생");
+	}
+}

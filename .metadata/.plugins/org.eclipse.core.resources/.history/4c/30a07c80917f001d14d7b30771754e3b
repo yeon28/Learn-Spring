@@ -1,0 +1,14 @@
+package p012.coupling.factory.pattern;
+
+/*instance를 만드는 공장 프로그램
+ * */
+public class BeanFactory {
+	public Object getBean(String beanNM) {
+		if (beanNM.equals("samsung")) {
+			return new SamsungTV();
+		} else if (beanNM.equals("lg")) {
+			return new LgTV();
+		} 
+		return null;
+	}
+}

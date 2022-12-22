@@ -1,0 +1,16 @@
+package com.spring.biz.common;
+
+import org.aspectj.lang.JoinPoint;
+
+public class AfterThrowingAdvice {
+
+	private void exeptionLog() {
+		System.out.println("[예외 처리] 비지니스 로직 수행 중 예외 발생");
+	}
+
+	private void exeptionLog2(JoinPoint jp, Exception e) {
+		String method = jp.getSignature().getName();
+
+		System.out.println("[예외 처리] " + method + "() ---> 메소드 수행중 발생된 예외 메시지 :" + e.getMessage());
+	}
+}

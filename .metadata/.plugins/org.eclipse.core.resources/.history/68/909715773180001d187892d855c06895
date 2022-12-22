@@ -1,0 +1,19 @@
+ackage p021.bean.basic;
+
+/*instance를 만드는 공장 프로그램
+ * - 새로운 클래스가 생기면 지속적으로 소스코드를 생성해야함.
+ * => application coding design pattern :: factory pattern*/
+public class BeanFactory {
+	
+	// 
+	public Object getBean(String beanNM) {
+		
+		if (beanNM.equals("samsung")) {
+			return new SamsungTV();
+		} else if (beanNM.equals("lg")) {
+			return new LgTV();
+		}
+		
+		return null;
+	}
+}

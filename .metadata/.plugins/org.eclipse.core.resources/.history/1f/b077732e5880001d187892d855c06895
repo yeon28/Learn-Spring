@@ -1,0 +1,31 @@
+package p401.di.annotation;
+
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.web.context.support.XmlWebApplicationContext;
+
+public class TVUser {
+	
+	public static void main(String[] args) {
+
+		
+		/* 
+		 applicationContext401.xml에서
+		 1. <context:component-scan>를 사용해 bean으로 자동 생성한 package를 지정함.
+		 	=> base-package="p401.di.annotation"로 지정함, 해당 package에 있는 class로 bean을 지정함.
+		 
+		  */	
+		AbstractApplicationContext factory 
+					= new GenericXmlApplicationContext("applicationContext401.xml");
+		
+		TV tv = (TV) factory.getBean("tv");
+		
+		tv.powerOn();
+		tv.volUp();
+		tv.volDown();
+		tv.powerOff();
+		
+		factory.close();
+		
+	}
+}

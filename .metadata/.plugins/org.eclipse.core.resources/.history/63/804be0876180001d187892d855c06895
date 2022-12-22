@@ -1,0 +1,19 @@
+package p110.di.contructor3;
+
+public class AppleSpeaker implements Speaker {
+	
+	public AppleSpeaker() {
+		System.out.println("--> AppleSpeaker 객체 생성");
+	}
+	
+	@Override
+	public void volUp() {
+		System.out.println("AppleSpeaker --> 볼륨을 올린다.");
+	}
+	
+	@Override
+	public void volDown() {
+		System.out.println("AppleSpeaker --> 볼륨을 내린다.");
+	}
+	
+}

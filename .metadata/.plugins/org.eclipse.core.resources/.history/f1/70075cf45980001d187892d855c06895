@@ -1,0 +1,23 @@
+package p401.di.annotation;
+
+import org.springframework.stereotype.Component;
+
+// id를 부여하지 않으면 spring이 class이름을 자동으로 부여함.
+@Component("apple")
+public class AppleSpeaker implements Speaker {
+	
+	public AppleSpeaker() {
+		System.out.println("--> AppleSpeaker 객체 생성");
+	}
+	
+	@Override
+	public void volUp() {
+		System.out.println("AppleSpeaker --> 볼륨을 올린다.");
+	}
+	
+	@Override
+	public void volDown() {
+		System.out.println("AppleSpeaker --> 볼륨을 내린다.");
+	}
+	
+}

@@ -1,0 +1,7 @@
+package p401.di.annotation;
+
+// interface는 기본적으로 @Component annotation 사용 불가함.
+public interface Speaker {
+	void volUp();
+	void volDown();
+}

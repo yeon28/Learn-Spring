@@ -1,0 +1,17 @@
+package p01.couping;
+
+public class SamsangTV {
+
+	public void powerOn() {
+		System.out.println("samsungTV--> 전원을 켠다");
+	}
+	public void powerOFF() {
+		System.out.println("samsungTV--> 전원을 끈다");
+	}
+	public void volumeUP() {
+		System.out.println("samsungTV--> 소리를 높임");
+	}
+	public void volumeDown() {
+		System.out.println("samsungTV--> 소리를 줄임");
+	}
+}

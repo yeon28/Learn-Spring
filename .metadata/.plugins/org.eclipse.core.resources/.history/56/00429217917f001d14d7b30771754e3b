@@ -1,0 +1,5 @@
+package p012.coupling.factory.pattern;
+
+public class BeanFactory {
+
+}

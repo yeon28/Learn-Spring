@@ -1,0 +1,17 @@
+package p01.couping;
+
+public class LgTV {
+
+	public void trunOn() {
+		System.out.println("LgTV--> 전원을 켠다");
+	}
+	public void trunOff() {
+		System.out.println("LgTV--> 전원을 끈다");
+	}
+	public void volumeUP() {
+		System.out.println("LgTV--> 소리를 높임");
+	}
+	public void volumeDown() {
+		System.out.println("LgTV--> 소리를 줄임");
+	}
+}
